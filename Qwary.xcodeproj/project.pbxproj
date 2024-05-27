@@ -1,0 +1,421 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		121FE02C2C04485C007CB6D0 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 121FE02B2C04485C007CB6D0 /* Readme.md */; };
+		121FE0322C0463AA007CB6D0 /* qw.intercept.sdk.merged.js in Resources */ = {isa = PBXBuildFile; fileRef = 121FE0312C0463AA007CB6D0 /* qw.intercept.sdk.merged.js */; };
+		1266F0072BF4C3BF00A4565C /* QwaryIos.docc in Sources */ = {isa = PBXBuildFile; fileRef = 1266F0062BF4C3BF00A4565C /* QwaryIos.docc */; };
+		1266F0082BF4C3BF00A4565C /* QwaryIos.h in Headers */ = {isa = PBXBuildFile; fileRef = 1266F0052BF4C3BF00A4565C /* QwaryIos.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12D573272BF5FBE200EE4688 /* Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D573262BF5FBE200EE4688 /* Delegates.swift */; };
+		12D5734B2BF6192900EE4688 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D5734A2BF6192900EE4688 /* PopUpViewController.swift */; };
+		12E2925C2BF73AF30076808F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E2925B2BF73AF30076808F /* Constants.swift */; };
+		12E515812C005E0C00CA3557 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E515802C005E0C00CA3557 /* AlertView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		121FE02B2C04485C007CB6D0 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		121FE0312C0463AA007CB6D0 /* qw.intercept.sdk.merged.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = qw.intercept.sdk.merged.js; sourceTree = "<group>"; };
+		121FE0352C04640B007CB6D0 /* render.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = render.html; sourceTree = "<group>"; };
+		1266F0022BF4C3BF00A4565C /* Qwary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Qwary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1266F0052BF4C3BF00A4565C /* QwaryIos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QwaryIos.h; sourceTree = "<group>"; };
+		1266F0062BF4C3BF00A4565C /* QwaryIos.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = QwaryIos.docc; sourceTree = "<group>"; };
+		129BB2612BFB67B700EE3E5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		12D573262BF5FBE200EE4688 /* Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegates.swift; sourceTree = "<group>"; };
+		12D5734A2BF6192900EE4688 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		12E2925B2BF73AF30076808F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		12E515802C005E0C00CA3557 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1266EFFF2BF4C3BF00A4565C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1266EFF82BF4C3BF00A4565C = {
+			isa = PBXGroup;
+			children = (
+				1266F0042BF4C3BF00A4565C /* QwaryIos */,
+				1266F0032BF4C3BF00A4565C /* Products */,
+				127ED1CE2BFCA619006CF13A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1266F0032BF4C3BF00A4565C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1266F0022BF4C3BF00A4565C /* Qwary.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1266F0042BF4C3BF00A4565C /* QwaryIos */ = {
+			isa = PBXGroup;
+			children = (
+				129BB2612BFB67B700EE3E5B /* Info.plist */,
+				1266F0052BF4C3BF00A4565C /* QwaryIos.h */,
+				1266F0062BF4C3BF00A4565C /* QwaryIos.docc */,
+				12D573262BF5FBE200EE4688 /* Delegates.swift */,
+				12E2925B2BF73AF30076808F /* Constants.swift */,
+				12D5739B2BF63D4700EE4688 /* WebView */,
+				12E2925F2BF765DA0076808F /* Qwary */,
+				121FE02B2C04485C007CB6D0 /* Readme.md */,
+				121FE0352C04640B007CB6D0 /* render.html */,
+				121FE0312C0463AA007CB6D0 /* qw.intercept.sdk.merged.js */,
+			);
+			path = QwaryIos;
+			sourceTree = "<group>";
+		};
+		127ED1CE2BFCA619006CF13A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		12D5739B2BF63D4700EE4688 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				12D5734A2BF6192900EE4688 /* PopUpViewController.swift */,
+				12E515802C005E0C00CA3557 /* AlertView.swift */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		12E2925F2BF765DA0076808F /* Qwary */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Qwary;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1266EFFD2BF4C3BF00A4565C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1266F0082BF4C3BF00A4565C /* QwaryIos.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1266F0012BF4C3BF00A4565C /* Qwary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1266F00B2BF4C3BF00A4565C /* Build configuration list for PBXNativeTarget "Qwary" */;
+			buildPhases = (
+				1266EFFD2BF4C3BF00A4565C /* Headers */,
+				1266EFFE2BF4C3BF00A4565C /* Sources */,
+				1266EFFF2BF4C3BF00A4565C /* Frameworks */,
+				1266F0002BF4C3BF00A4565C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Qwary;
+			productName = QwaryIos;
+			productReference = 1266F0022BF4C3BF00A4565C /* Qwary.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1266EFF92BF4C3BF00A4565C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					1266F0012BF4C3BF00A4565C = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 1266EFFC2BF4C3BF00A4565C /* Build configuration list for PBXProject "Qwary" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1266EFF82BF4C3BF00A4565C;
+			productRefGroup = 1266F0032BF4C3BF00A4565C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1266F0012BF4C3BF00A4565C /* Qwary */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1266F0002BF4C3BF00A4565C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				121FE02C2C04485C007CB6D0 /* Readme.md in Resources */,
+				121FE0322C0463AA007CB6D0 /* qw.intercept.sdk.merged.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1266EFFE2BF4C3BF00A4565C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12D5734B2BF6192900EE4688 /* PopUpViewController.swift in Sources */,
+				12D573272BF5FBE200EE4688 /* Delegates.swift in Sources */,
+				1266F0072BF4C3BF00A4565C /* QwaryIos.docc in Sources */,
+				12E2925C2BF73AF30076808F /* Constants.swift in Sources */,
+				12E515812C005E0C00CA3557 /* AlertView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1266F0092BF4C3BF00A4565C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1266F00A2BF4C3BF00A4565C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1266F00C2BF4C3BF00A4565C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/QwaryIos",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QwaryIos/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = GeekTech.QwaryIos;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1266F00D2BF4C3BF00A4565C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/QwaryIos",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QwaryIos/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = GeekTech.QwaryIos;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1266EFFC2BF4C3BF00A4565C /* Build configuration list for PBXProject "Qwary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1266F0092BF4C3BF00A4565C /* Debug */,
+				1266F00A2BF4C3BF00A4565C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1266F00B2BF4C3BF00A4565C /* Build configuration list for PBXNativeTarget "Qwary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1266F00C2BF4C3BF00A4565C /* Debug */,
+				1266F00D2BF4C3BF00A4565C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1266EFF92BF4C3BF00A4565C /* Project object */;
+}
