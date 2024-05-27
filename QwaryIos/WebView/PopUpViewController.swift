@@ -238,40 +238,17 @@ extension QwaryWebView:Callback{
 
 extension QwaryWebView: WKNavigationDelegate {
     public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-      
-        print("Did Finish Calls")
-        //injectJavaScript()
+
         executeJavascript()
       
     }
     
     
 
-    public func injectJavaScript(){
-        let script = getInitScript(appId: appID)
-        print("Sript \(script)")
-        webView.evaluateJavaScript(script) { (result, error) in
-            if let error = error {
-                print("Error injecting JavaScript: \(error)")
-            } else {
-                print("JavaScript injected successfully \(String(describing: result))")
-                
-            }
-        }
-    }
+   
+    //Executes the Java script code after Finishes the WebView Loading
     func executeJavascript(callback: ((String?) -> Void)? = nil) {
         let javascript = getInitScript(appId: appID)
-//        print("executeJavascript: \(javascript)")
-//        let jweb = JSContext()
-//        jweb?.evaluateScript("var console = { log: function(message) { _consoleLog(message) } }")
-//         let consoleLog: @convention(block) (String) -> Void = { message in
-//             print("console.log: " + message)
-//         }
-//        let logHandler: @convention(block) (String) -> Void = { string in
-//            print(string)
-//        }
-//        jweb.
-//        jweb?.setObject(unsafeBitCast(consoleLog, to: AnyObject.self), forKeyedSubscript: "_consoleLog" as (NSCopying & NSObjectProtocol)?)
         webView.evaluateJavaScript(javascript) { result, error in
             if let error = error {
                 print("JavaScript execution error: \(error)")
