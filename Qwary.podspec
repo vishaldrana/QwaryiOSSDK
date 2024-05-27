@@ -17,16 +17,17 @@ Pod::Spec.new do |spec|
 
   spec.name         = "Qwary"
   spec.version      = "0.0.1"
-  spec.summary      = "The Qwary iOS SDK allows you to seamlessly integrate surveys and feedback forms into your iOS application"
+  spec.summary      = "The Qwary iOS SDK allows you to seamlessly integrate surveys and can make you flexible to show the surgery on any screen"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  spec.description  = "The Qwary iOS SDK allows you to seamlessly integrate surveys and feedback forms into your iOS application"
+  spec.description  = "The Qwary iOS SDK allows you to seamlessly integrate surveys and feedback forms into your iOS application ,The Qwary iOS SDK allows you to seamlessly integrate surveys and feedback forms into your iOS application "
+"
 
-  spec.homepage     = "http://EXAMPLE/Qwary"
+   spec.homepage     = "https://www.qwary.com/"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -79,7 +80,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://git@github.com:vishaldrana/QwaryiOSSDK.git", :tag => spec.version.to_s }
+  spec.source       = { :git => "https://github.com/vishaldrana/QwaryiOSSDK.git", :tag => spec.version.to_s }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
