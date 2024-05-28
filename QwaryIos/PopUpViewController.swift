@@ -74,10 +74,10 @@ internal class QwaryWebView:NSObject, QwaryInterface, WKScriptMessageHandler {
         
         
     }
+    //MARK: Get the Access of Html file
     private func loadHTMLPage(){
         let frameworkBundle = Bundle(for: type(of: self))
         
-        // Debugging: Print bundle identifier and resource paths
         if let htmlPath = frameworkBundle.path(forResource: "render", ofType: "html") {
             let localHTMLUrl = URL(fileURLWithPath: htmlPath)
             webView.loadFileURL(localHTMLUrl, allowingReadAccessTo: localHTMLUrl)
@@ -85,6 +85,8 @@ internal class QwaryWebView:NSObject, QwaryInterface, WKScriptMessageHandler {
         }
         
     }
+    
+    //MARK: Get the Access of Javascript file
     private func getJSPath(){
         let frameworkBundle = Bundle(for: type(of: self))
         if let jsFilePath = frameworkBundle.path(forResource: "qw.intercept.sdk.merged", ofType: "js") {
@@ -118,15 +120,15 @@ internal class QwaryWebView:NSObject, QwaryInterface, WKScriptMessageHandler {
     func executeJavascript(_ javascript: String, callback: ((String?) -> Void)? = nil) {
         webView.evaluateJavaScript(javascript) { (result, error) in
             if let error = error {
-                print("Error executing JavaScript: \(error.localizedDescription)")
+                //print("Error executing JavaScript: \(error.localizedDescription)")
                 callback?(nil)
             } else if let result = result as? String {
-                print("JavaScript execution result: \(result)")
+                //print("JavaScript execution result: \(result)")
                 
                 callback?(result)
             } else {
                 // Handle other result types if needed
-                print("JavaScript Call back nil")
+                //print("JavaScript Call back nil")
                 callback?(nil)
             }
         }

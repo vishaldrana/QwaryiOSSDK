@@ -27,7 +27,7 @@
 		126F8A712C05ACE6002482E9 /* render.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = render.html; sourceTree = "<group>"; };
 		129BB2612BFB67B700EE3E5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		12D573262BF5FBE200EE4688 /* Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegates.swift; sourceTree = "<group>"; };
-		12D5734A2BF6192900EE4688 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PopUpViewController.swift; path = QwaryIos/WebView/PopUpViewController.swift; sourceTree = SOURCE_ROOT; };
+		12D5734A2BF6192900EE4688 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PopUpViewController.swift; path = QwaryIos/PopUpViewController.swift; sourceTree = SOURCE_ROOT; };
 		12E2925B2BF73AF30076808F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		12E515802C005E0C00CA3557 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,11 +68,13 @@
 				1266F0062BF4C3BF00A4565C /* QwaryIos.docc */,
 				12D573262BF5FBE200EE4688 /* Delegates.swift */,
 				12E2925B2BF73AF30076808F /* Constants.swift */,
+				12D5734A2BF6192900EE4688 /* PopUpViewController.swift */,
+				12E515802C005E0C00CA3557 /* AlertView.swift */,
 				12D5739B2BF63D4700EE4688 /* WebView */,
 				12E2925F2BF765DA0076808F /* Qwary */,
-				121FE02B2C04485C007CB6D0 /* Readme.md */,
 				121FE0312C0463AA007CB6D0 /* qw.intercept.sdk.merged.js */,
 				126F8A712C05ACE6002482E9 /* render.html */,
+				121FE02B2C04485C007CB6D0 /* Readme.md */,
 			);
 			path = QwaryIos;
 			sourceTree = "<group>";
@@ -87,8 +89,6 @@
 		12D5739B2BF63D4700EE4688 /* WebView */ = {
 			isa = PBXGroup;
 			children = (
-				12D5734A2BF6192900EE4688 /* PopUpViewController.swift */,
-				12E515802C005E0C00CA3557 /* AlertView.swift */,
 			);
 			path = WebView;
 			sourceTree = "<group>";
@@ -345,6 +345,7 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = GeekTech.QwaryIos;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

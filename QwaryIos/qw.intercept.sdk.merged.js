@@ -27187,12 +27187,6 @@ jQwary.fn.initializeQwaryClientIntercept = function () {
 
 /* Start: video thumbnail screen */
 function qwInit(sdkSettings) {
-    
-//    try{
-//        window.webkit.messageHandlers.qwSdkHook.postMessage(message)
-//    }catch(e){
-//        console.log('error in ios function')
-//    }
 
   if (qwaryClientIntercept == null) {
     qwaryClientIntercept = jQwary(this).initializeQwaryClientIntercept();
@@ -29102,18 +29096,6 @@ jQwary.fn.initializeQwary = function () {
         console.log('qwShow', e);
       }
         
-        //Satinder Change iOS
-        
-        var data = {
-            name: `${qwarySettings.mobileSdkPopupHeight}`,
-            isBanner: isBannerSDKVisible,
-            // Add more key-value pairs as needed
-        };
-//        try{
-//            window.webkit.messageHandlers.qwSdkHook.qwShow.postMessage(data)
-//        }catch(e){
-//            console.log('error in ios function')
-//        }
       /*
          * let $style = jQwary('<style>.qw__view_highlight{outline: #ffd65b
          * solid 5px !important;}</style>'); jQwary('head').append($style);
