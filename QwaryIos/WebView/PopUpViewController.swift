@@ -10,12 +10,12 @@ import UIKit
 import WebKit
 import JavaScriptCore
 
- internal class QwaryWebView:NSObject, QwaryInterface, WKScriptMessageHandler {
+internal class QwaryWebView:NSObject, QwaryInterface, WKScriptMessageHandler {
     
     //static let shared = Qwary()
     var appID = ""
     var QW_SDK_HOOK = "qwSdkHook"
-
+    
     var webView = WKWebView()
     var alertController: UIAlertController!
     private weak var viewController: UIViewController?
@@ -28,31 +28,29 @@ import JavaScriptCore
         super.init()
         self.delegate = self
     }
-     //MARK: Functions for Implementation Qwary Interface
-     func configure(context: UIViewController, qwSettings: String) {
+    //MARK: Functions for Implementation Qwary Interface
+    func configure(context: UIViewController, qwSettings: String) {
         self.appID = qwSettings
         self.viewController = context
-       
+        
         let screenHeight = UIScreen.main.bounds.height
-         _ = screenHeight / 3
+        _ = screenHeight / 3
         sdkReadyQueue.removeAll()
         // Add your custom view to the action sheet as well as WebView
         let customViewWidth = context.view.frame.width
         let frame = CGRect(x: 0, y: 0, width: customViewWidth - 12, height: 300)
         // Made WKWebView Configuration
         let contentController = WKUserContentController()
-  
+        
         let webViewConfiguration = WKWebViewConfiguration()
         let webpagePreferences = WKWebpagePreferences()
-         if #available(iOS 14.0, *) {
-             webpagePreferences.allowsContentJavaScript = true
-         } else {
-             // Fallback on earlier versions
-             
-         }
+        if #available(iOS 14.0, *) {
+            webpagePreferences.allowsContentJavaScript = true
+        } else {
+            webpagePreferences.preferredContentMode
+        }
         
         webViewConfiguration.defaultWebpagePreferences = webpagePreferences
-        
         webViewConfiguration.preferences.javaScriptCanOpenWindowsAutomatically = true
         webViewConfiguration.userContentController = contentController
         webView = WKWebView(frame: frame,configuration: webViewConfiguration)
@@ -62,32 +60,46 @@ import JavaScriptCore
         let srcroot = URL(fileURLWithPath: #file).deletingLastPathComponent()
             .deletingLastPathComponent()
         rootPathUrl = URL(string: "\(srcroot)render.html")!
-         if #available(iOS 14.0, *) {
-             webView.configuration.defaultWebpagePreferences.allowsContentJavaScript  = true
-         } else {
-             // Fallback on earlier versions
-         }
-
+        if #available(iOS 14.0, *) {
+            webView.configuration.defaultWebpagePreferences.allowsContentJavaScript  = true
+        } else {
+            // Fallback on earlier versions
+            webView.configuration.preferences.javaScriptEnabled = true
+        }
+        
         let url = URL(string: "\(srcroot)render.html")!
-         webView.loadFileURL(url, allowingReadAccessTo: url)
-         
-//        alertController = UIAlertController(title: "Custom", message: nil, preferredStyle: .actionSheet)
-//        alertController.view.addSubview(webView)
-//        // Present the Action Sheet
-//        context.present(alertController, animated:
-         
+        loadHTMLPage()
+        getJSPath()
+        //webView.loadFileURL(url, allowingReadAccessTo: url)
         
         
     }
-   
-     public func presentSurvey(fragmentActivity: UIViewController, isBanner: Bool) {
+    private func loadHTMLPage(){
+        let frameworkBundle = Bundle(for: type(of: self))
+        
+        // Debugging: Print bundle identifier and resource paths
+        if let htmlPath = frameworkBundle.path(forResource: "render", ofType: "html") {
+            let localHTMLUrl = URL(fileURLWithPath: htmlPath)
+            webView.loadFileURL(localHTMLUrl, allowingReadAccessTo: localHTMLUrl)
+            
+        }
+        
+    }
+    private func getJSPath(){
+        let frameworkBundle = Bundle(for: type(of: self))
+        if let jsFilePath = frameworkBundle.path(forResource: "qw.intercept.sdk.merged", ofType: "js") {
+            jSpath = jsFilePath
+            
+        }
+    }
+    public func presentSurvey(fragmentActivity: UIViewController, isBanner: Bool) {
         if !isSdkReady{
-            print("Sdk Is not ready Yet")
+            
             return
         }else{
             AlertHelper.shared.showAlert(on: viewController!, title: "", message: "", shouldShowWebView: true, web: webView)
         }
-       
+        
     }
     
     public func addEvent(eventName: String) {
@@ -102,29 +114,8 @@ import JavaScriptCore
     public func dismissActiveSurvey() {
         print("Dismiss Active survey Called")
     }
-
-    //Get the files
-     private func readFileByBundleIF(bundleIF:String,name: String, type: String) -> String {
-        //Get The exact root path of file
-        var filePath = ""
-        if let sdkBundle = Bundle(identifier: bundleIF) {
-                    if let path = sdkBundle.path(forResource: name, ofType: type) {
-                        print("File path:== \(path)")
-                     filePath = path
-                        return filePath
-                    } else {
-                        filePath = "\(name) file of \(type) found in SDK bundle"
-                        return filePath
-                    }
-                } else {
-                  
-                    filePath = "\(bundleIF) not found in Application"
-                    return filePath
-                }
-            
-        }
+    
     func executeJavascript(_ javascript: String, callback: ((String?) -> Void)? = nil) {
-        print("executeJavascript: \(javascript)")
         webView.evaluateJavaScript(javascript) { (result, error) in
             if let error = error {
                 print("Error executing JavaScript: \(error.localizedDescription)")
@@ -142,15 +133,15 @@ import JavaScriptCore
     }
     //Override Method gor WKscriptMessage Handler
     public func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-//        print("ReceivedMessageBody \(message.body)")
-//        print("Received Message Name \(message.name)")
+        //        print("ReceivedMessageBody \(message.body)")
+        //        print("Received Message Name \(message.name)")
         //print("Received MessageBody \(message.body)")
         if let messageBody = message.body as? [String: Any]{
             print("message Body: \(messageBody)")
         }
-//        if message.name == QW_SDK_HOOK{
-//            print("Hook Tracked")
-//        }
+        //        if message.name == QW_SDK_HOOK{
+        //            print("Hook Tracked")
+        //        }
         if let dict = message.body as? [String:Any] {
             print("Returns from Dictionary cast \(dict)")
             return
@@ -165,24 +156,24 @@ import JavaScriptCore
         case "qwMobileSdkReady":
             delegate?.qwMobileSdkReady(data:data )
         case "qwSurveyHeight":
-                delegate?.qwSurveyHeight(data: data)
-//        case "qwShow":
-//            print("Full Body \(message.body)")
-//            if let body = message.body as? [String:Any] {
-//                if let name = body["name"], let isTrue = body["isBanner"]{
-//                    print("qwShow is tracked")
-//                    delegate?.qwShow(data: name as! String, isBanner: isTrue as! Bool)
-//                }
-//               
-//            }
+            delegate?.qwSurveyHeight(data: data)
+            //        case "qwShow":
+            //            print("Full Body \(message.body)")
+            //            if let body = message.body as? [String:Any] {
+            //                if let name = body["name"], let isTrue = body["isBanner"]{
+            //                    print("qwShow is tracked")
+            //                    delegate?.qwShow(data: name as! String, isBanner: isTrue as! Bool)
+            //                }
+            //
+            //            }
         case "qwShow":
             delegate?.qwShow(data: data, isBanner: false)
         case "qwEventTracking":
-                delegate?.qwEventTracking(data: data)
+            delegate?.qwEventTracking(data: data)
         case "qwMobileLogout":
-                delegate?.qwMobileLogout(data: data)
+            delegate?.qwMobileLogout(data: data)
         case "qwDismissSurvey":
-                delegate?.qwDismissSurvey(data: data)
+            delegate?.qwDismissSurvey(data: data)
         case "CLOSE":
             AlertHelper.shared.dismissAlert()
         case "SURVEY_COMPLETED":
@@ -238,150 +229,13 @@ extension QwaryWebView:Callback{
 
 extension QwaryWebView: WKNavigationDelegate {
     public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-
-        executeJavascript()
-      
-    }
-    
-    
-
-   
-    //Executes the Java script code after Finishes the WebView Loading
-    func executeJavascript(callback: ((String?) -> Void)? = nil) {
         let javascript = getInitScript(appId: appID)
-        webView.evaluateJavaScript(javascript) { result, error in
-            if let error = error {
-                print("JavaScript execution error: \(error)")
-                callback?(nil)
-                return
-            }
-            if let resultString = result as? String {
-                print("Result String \(resultString)")
-                callback?(resultString)
-            } else {
-                callback?(nil)
-            }
-        }
+        executeJavascript(javascript)
+        
     }
-
+    
+    
+    
     
 }
 
-    
-//
-//class CallBackInterface: NSObject, WKScriptMessageHandler {
-//     var delegate: Callback?
-//
-//    init(delegate: Callback) {
-//        self.delegate = delegate
-//    }
-//
-//    // Method to handle incoming messages from JavaScript
-//    public func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-//        print("Received Message \(message)")
-//        print("Received MessageBody \(message.body)")
-//        print("Received MessageName \(message.name)")
-//        guard let body = message.body as? [String: Any], let method = body["method"] as? String else {
-//            print("return from parsing the data")
-//            return
-//        }
-//       print("Body Method calls")
-//        switch method {
-//        case "qwMobileSdkReady":
-//            if let data = body["data"] as? String {
-//                delegate?.qwMobileSdkReady(data: data)
-//            }
-//
-//        case "qwSurveyHeight":
-//            if let data = body["data"] as? String {
-//                delegate?.qwSurveyHeight(data: data)
-//            }
-//
-//        case "qwShow":
-//            if let data = body["data"] as? String, let isBanner = body["isBanner"] as? Bool {
-//                delegate?.qwShow(data: data, isBanner: isBanner)
-//            }
-//
-//        case "qwEventTracking":
-//            if let data = body["data"] as? String {
-//                delegate?.qwEventTracking(data: data)
-//            }
-//
-//        case "qwMobileLogout":
-//            if let data = body["data"] as? String {
-//                delegate?.qwMobileLogout(data: data)
-//            }
-//
-//        case "qwDismissSurvey":
-//            if let data = body["data"] as? String {
-//                delegate?.qwDismissSurvey(data: data)
-//            }
-//        case "CLOSE":
-//            print("Close function called from javascript")
-//
-//        default:
-//            break
-//        }
-//    }
-//    
-//}
-////
-////extension CustomActionSheetController:WKNavigationDelegate{
-////    public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-////        let appId = "c5e3e8c3-5b12-481d-a4c9-1570bd532860"
-////        let script = getInitScript(appId: appId)
-////        webView.evaluateJavaScript(script) { (result, error) in
-////            if let error = error {
-////                print("Error injecting JavaScript: \(error)")
-////            } else {
-////                print("JavaScript injected successfully")
-////            }
-////        }
-////    }
-////    func getInitScript(appId: String) -> String
-////  {
-////      return """
-////      var app_id = "\(appId)";
-////      window.qwSettings = {
-////        appId: app_id,
-////      };
-////      !(function () {
-////        if (!window.qwTracking) {
-////          window.qwTracking = Object.assign({}, window.qwTracking, {
-////            queue:
-////              window.qwTracking && window.qwTracking.queue
-////                ? window.qwTracking.queue
-////                : [],
-////            track: function (t) {
-////              console.log("track");
-////              this.queue.push({ type: "track", props: t });
-////            },
-////            init: function (t) {
-////              console.log("init");
-////              this.queue.push({ type: "init", props: t });
-////            },
-////          });
-////          window.qwSettings;
-////          var t = function (t) {
-////            console.log("create",window?.qwSettings?.appId);
-////            var e = document.createElement("script");
-////            e.type = "text/javascript";
-////            e.async = true;
-////            e.src = "/Users/geektech/Documents/QwarySDk/QwaryIos/QwaryIos/qw.intercept.sdk.merged.js?id=" + app_id;
-////            var n = document.getElementsByTagName("script")[0];
-////            // Satinder Change as n is undefined  n.parentNode.insertBefore(e,n)
-////            document.head.appendChild(e);
-////          };
-////          if (document.readyState === "complete") {
-////            t();
-////          } else if (window.attachEvent) {
-////            window.attachEvent("onload", t);
-////          } else {
-////            window.addEventListener("load", t, false);
-////          }
-////        }
-////      })();
-////      qwTracking.init(qwSettings);
-////      """
-////  }
-////}

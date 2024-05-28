@@ -2,7 +2,8 @@
 import Foundation
 import WebKit
 
-var path = ""
+var jSpath = ""
+//e.src = "\(srcroot)QwaryIos/qw.intercept.sdk.merged.js?id=" + app_id;
 func getInitScript(appId: String) -> String
 {
     let srcroot = URL(fileURLWithPath: #file).deletingLastPathComponent()
@@ -43,7 +44,7 @@ func getInitScript(appId: String) -> String
         var e = document.createElement("script");
         e.type = "text/javascript";
         e.async = true;
-        e.src = "\(srcroot)QwaryIos/qw.intercept.sdk.merged.js?id=" + app_id;
+        e.src = "\(jSpath)?id=" + app_id;
         var n = document.getElementsByTagName("script")[0];
         // Satinder Change as n is undefined  n.parentNode.insertBefore(e,n)
         document.head.appendChild(e);

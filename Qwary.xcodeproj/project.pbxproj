@@ -11,6 +11,7 @@
 		121FE0322C0463AA007CB6D0 /* qw.intercept.sdk.merged.js in Resources */ = {isa = PBXBuildFile; fileRef = 121FE0312C0463AA007CB6D0 /* qw.intercept.sdk.merged.js */; };
 		1266F0072BF4C3BF00A4565C /* QwaryIos.docc in Sources */ = {isa = PBXBuildFile; fileRef = 1266F0062BF4C3BF00A4565C /* QwaryIos.docc */; };
 		1266F0082BF4C3BF00A4565C /* QwaryIos.h in Headers */ = {isa = PBXBuildFile; fileRef = 1266F0052BF4C3BF00A4565C /* QwaryIos.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		126F8A722C05ACE6002482E9 /* render.html in Resources */ = {isa = PBXBuildFile; fileRef = 126F8A712C05ACE6002482E9 /* render.html */; };
 		12D573272BF5FBE200EE4688 /* Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D573262BF5FBE200EE4688 /* Delegates.swift */; };
 		12D5734B2BF6192900EE4688 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D5734A2BF6192900EE4688 /* PopUpViewController.swift */; };
 		12E2925C2BF73AF30076808F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E2925B2BF73AF30076808F /* Constants.swift */; };
@@ -20,13 +21,13 @@
 /* Begin PBXFileReference section */
 		121FE02B2C04485C007CB6D0 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		121FE0312C0463AA007CB6D0 /* qw.intercept.sdk.merged.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = qw.intercept.sdk.merged.js; sourceTree = "<group>"; };
-		121FE0352C04640B007CB6D0 /* render.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = render.html; sourceTree = "<group>"; };
 		1266F0022BF4C3BF00A4565C /* Qwary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Qwary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1266F0052BF4C3BF00A4565C /* QwaryIos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QwaryIos.h; sourceTree = "<group>"; };
 		1266F0062BF4C3BF00A4565C /* QwaryIos.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = QwaryIos.docc; sourceTree = "<group>"; };
+		126F8A712C05ACE6002482E9 /* render.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = render.html; sourceTree = "<group>"; };
 		129BB2612BFB67B700EE3E5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		12D573262BF5FBE200EE4688 /* Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegates.swift; sourceTree = "<group>"; };
-		12D5734A2BF6192900EE4688 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		12D5734A2BF6192900EE4688 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PopUpViewController.swift; path = QwaryIos/WebView/PopUpViewController.swift; sourceTree = SOURCE_ROOT; };
 		12E2925B2BF73AF30076808F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		12E515802C005E0C00CA3557 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,8 +71,8 @@
 				12D5739B2BF63D4700EE4688 /* WebView */,
 				12E2925F2BF765DA0076808F /* Qwary */,
 				121FE02B2C04485C007CB6D0 /* Readme.md */,
-				121FE0352C04640B007CB6D0 /* render.html */,
 				121FE0312C0463AA007CB6D0 /* qw.intercept.sdk.merged.js */,
+				126F8A712C05ACE6002482E9 /* render.html */,
 			);
 			path = QwaryIos;
 			sourceTree = "<group>";
@@ -170,6 +171,7 @@
 			files = (
 				121FE02C2C04485C007CB6D0 /* Readme.md in Resources */,
 				121FE0322C0463AA007CB6D0 /* qw.intercept.sdk.merged.js in Resources */,
+				126F8A722C05ACE6002482E9 /* render.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
