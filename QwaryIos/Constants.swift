@@ -6,8 +6,8 @@ var jSpath = ""
 //e.src = "\(srcroot)QwaryIos/qw.intercept.sdk.merged.js?id=" + app_id;
 func getInitScript(appId: String) -> String
 {
-    let srcroot = URL(fileURLWithPath: #file).deletingLastPathComponent()
-        .deletingLastPathComponent()
+//    let srcroot = URL(fileURLWithPath: #file).deletingLastPathComponent()
+//        .deletingLastPathComponent()
 
     return """
   var app_id = "\(appId)";

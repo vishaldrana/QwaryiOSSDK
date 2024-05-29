@@ -15,7 +15,7 @@ internal class QwaryWebView:NSObject, QwaryInterface, WKScriptMessageHandler {
     //static let shared = Qwary()
     var appID = ""
     var QW_SDK_HOOK = "qwSdkHook"
-    
+    var webFrame = CGRect()
     var webView = WKWebView()
     var alertController: UIAlertController!
     private weak var viewController: UIViewController?
@@ -29,16 +29,17 @@ internal class QwaryWebView:NSObject, QwaryInterface, WKScriptMessageHandler {
         self.delegate = self
     }
     //MARK: Functions for Implementation Qwary Interface
+ 
     func configure(context: UIViewController, qwSettings: String) {
         self.appID = qwSettings
         self.viewController = context
         
         let screenHeight = UIScreen.main.bounds.height
-        _ = screenHeight / 3
+        var dynamicHeight = screenHeight / 3
         sdkReadyQueue.removeAll()
         // Add your custom view to the action sheet as well as WebView
         let customViewWidth = context.view.frame.width
-        let frame = CGRect(x: 0, y: 0, width: customViewWidth - 12, height: 300)
+        let frame = CGRect(x: 0, y: 0, width: customViewWidth - 12, height: dynamicHeight)
         // Made WKWebView Configuration
         let contentController = WKUserContentController()
         
@@ -66,7 +67,8 @@ internal class QwaryWebView:NSObject, QwaryInterface, WKScriptMessageHandler {
             // Fallback on earlier versions
             webView.configuration.preferences.javaScriptEnabled = true
         }
-        
+        webView.translatesAutoresizingMaskIntoConstraints = false
+        webView.backgroundColor = .black
         let url = URL(string: "\(srcroot)render.html")!
         loadHTMLPage()
         getJSPath()
@@ -74,32 +76,19 @@ internal class QwaryWebView:NSObject, QwaryInterface, WKScriptMessageHandler {
         
         
     }
-    //MARK: Get the Access of Html file
-    private func loadHTMLPage(){
-        let frameworkBundle = Bundle(for: type(of: self))
-        
-        if let htmlPath = frameworkBundle.path(forResource: "render", ofType: "html") {
-            let localHTMLUrl = URL(fileURLWithPath: htmlPath)
-            webView.loadFileURL(localHTMLUrl, allowingReadAccessTo: localHTMLUrl)
-            
-        }
-        
-    }
     
-    //MARK: Get the Access of Javascript file
-    private func getJSPath(){
-        let frameworkBundle = Bundle(for: type(of: self))
-        if let jsFilePath = frameworkBundle.path(forResource: "qw.intercept.sdk.merged", ofType: "js") {
-            jSpath = jsFilePath
-            
-        }
-    }
     public func presentSurvey(fragmentActivity: UIViewController, isBanner: Bool) {
         if !isSdkReady{
             
             return
         }else{
             AlertHelper.shared.showAlert(on: viewController!, title: "", message: "", shouldShowWebView: true, web: webView)
+            if #available(iOS 15.0, *) {
+                webView.underPageBackgroundColor = .clear
+            } else {
+                // Fallback on earlier versions
+                webView.backgroundColor = .black
+            }
         }
         
     }
@@ -135,15 +124,10 @@ internal class QwaryWebView:NSObject, QwaryInterface, WKScriptMessageHandler {
     }
     //Override Method gor WKscriptMessage Handler
     public func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-        //        print("ReceivedMessageBody \(message.body)")
-        //        print("Received Message Name \(message.name)")
-        //print("Received MessageBody \(message.body)")
+        
         if let messageBody = message.body as? [String: Any]{
             print("message Body: \(messageBody)")
         }
-        //        if message.name == QW_SDK_HOOK{
-        //            print("Hook Tracked")
-        //        }
         if let dict = message.body as? [String:Any] {
             print("Returns from Dictionary cast \(dict)")
             return
@@ -158,6 +142,10 @@ internal class QwaryWebView:NSObject, QwaryInterface, WKScriptMessageHandler {
         case "qwMobileSdkReady":
             delegate?.qwMobileSdkReady(data:data )
         case "qwSurveyHeight":
+            if let height = message.body as? String {
+                            print("Received survey height: \(height)")
+                            // Handle the height value as needed
+            }
             delegate?.qwSurveyHeight(data: data)
             //        case "qwShow":
             //            print("Full Body \(message.body)")
@@ -187,7 +175,26 @@ internal class QwaryWebView:NSObject, QwaryInterface, WKScriptMessageHandler {
         
     }
     
+    //MARK: Get the Access of Html file
+    private func loadHTMLPage(){
+        let frameworkBundle = Bundle(for: type(of: self))
+        
+        if let htmlPath = frameworkBundle.path(forResource: "render", ofType: "html") {
+            let localHTMLUrl = URL(fileURLWithPath: htmlPath)
+            webView.loadFileURL(localHTMLUrl, allowingReadAccessTo: localHTMLUrl)
+            
+        }
+        
+    }
     
+    //MARK: Get the Access of Javascript file
+    private func getJSPath(){
+        let frameworkBundle = Bundle(for: type(of: self))
+        if let jsFilePath = frameworkBundle.path(forResource: "qw.intercept.sdk.merged", ofType: "js") {
+            jSpath = jsFilePath
+            
+        }
+    }
 }
 //MARK: Content Handler CallBacks from Qwary Web View
 extension QwaryWebView:Callback{

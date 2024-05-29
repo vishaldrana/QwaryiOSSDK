@@ -12,26 +12,28 @@ class AlertHelper {
                    message: String,
                    shouldShowWebView: Bool,
                    web: WKWebView) {
-        
-        
-        
         if shouldShowWebView{
             alertController = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
-            // Create WKWebView
+            
+            //Calculate the Frame data
             let screenHeight = UIScreen.main.bounds.height
-            _ = screenHeight / 3
-            
-            // Add your custom view to the action sheet
+            let height  = screenHeight / 3
             let customViewWidth = UIScreen.main.bounds.width
-            let frame = CGRect(x: 0, y: 0, width: customViewWidth - 12, height: 300)
+            var frame = CGRect()
+            let cView = UIView()
+            
+            cView.backgroundColor = UIColor.white
+            //if #available(iOS 16.0, *) {
+                if screenHeight > 750 {
+                
+                frame = CGRect(x: 0, y: 0, width: customViewWidth - 12, height: height - 15 )
+                cView.frame = CGRect(x: 0, y: 0, width: customViewWidth - 12, height: height)
+            } else {
+                // Fallback on earlier versions
+                frame = CGRect(x: 0, y: 0, width: customViewWidth - 12, height: 267 )
+                cView.frame = CGRect(x: 0, y: 0, width: customViewWidth - 12, height: 290 )
+            }
             web.frame = frame
-            //webView.load(URLRequest(url: webViewURL))
-            //web.loadFileURL(webViewURL, allowingReadAccessTo: webViewURL)
-            
-            // Create UIViewController to hold the WKWebView
-            
-            // Add the webViewController as a child of UIAlertController
-            //alertController.setValue(webViewController, forKey: "contentViewController")
             let dismissAction1 = UIAlertAction(title: "", style: .default, handler: nil)
             let dismissAction2 = UIAlertAction(title: "", style: .default, handler: nil)
             let dismissAction3 = UIAlertAction(title: "", style: .default, handler: nil)
@@ -40,13 +42,21 @@ class AlertHelper {
             alertController.addAction(dismissAction2)
             alertController.addAction(dismissAction3)
             alertController.addAction(dismissAction)
-            
+            alertController.view.addSubview(cView)
             alertController.view.addSubview(web)
+            //alertController.view.backgroundColor = UIColor.clear
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                // If it's an iPad, present the action sheet using a popover presentation controller
+                if let popoverController = alertController.popoverPresentationController {
+                    popoverController.sourceView = viewController.view // Set the source view
+                    popoverController.sourceRect = CGRect(x: 0, y: 0, width: customViewWidth, height: height/3) // Set the source rect
+                    // You can also set popoverController.barButtonItem if you're presenting from a bar button item
+                }
+            }
             viewController.present(alertController, animated: true, completion: nil)
-        }else{
-            print("Alert is not Displayed Because shouldShowWebView is false")
         }
         
+   
         
     }
     

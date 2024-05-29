@@ -23690,6 +23690,7 @@ function qw_adjustDialogHeight(qwarySettings, qwaryUserSettings, dataJson, $fram
         // Satinder Change callback for height qwSurveyHeight
         try {
           qwSdkHook.qwSurveyHeight(`${height}`);
+            window.webkit.messageHandlers.qwSurveyHeight.postMessage(height);
         } catch (e) {
           console.log('qwSurveyHeight', e);
         }
