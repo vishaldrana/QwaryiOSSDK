@@ -23,5 +23,5 @@ protocol Callback {
     func qwDismissSurvey(data: String)
 }
 
-public var Qwary:QwaryInterface = QwaryWebView()
+public var Qwary:QwaryInterface = QwaryWebController()
 

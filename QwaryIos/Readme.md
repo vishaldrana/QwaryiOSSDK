@@ -20,7 +20,10 @@ Download the Qwary SDK from the Qwary website or obtain it from the designated s
 
 3. Click Finish to import the module into your project.
 
-4. Configure the SDK
+4. Configure the SDK 
+    (4.1) (Go to  Project Target/General/Frameworks,Libraries)
+    (4.2) Find the Qwary Framework
+    (4.3) Set the Embed&signIn for Qwary Framework
 Obtain Your App ID
 To configure the SDK, you need to obtain your unique App ID from your Qwary account. Follow these steps to find it:
 

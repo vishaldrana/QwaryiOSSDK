@@ -10,7 +10,7 @@ import UIKit
 import WebKit
 import JavaScriptCore
 
-internal class QwaryWebView:NSObject, QwaryInterface, WKScriptMessageHandler {
+internal class QwaryWebController:NSObject, QwaryInterface, WKScriptMessageHandler {
     
     //static let shared = Qwary()
     var appID = ""
@@ -82,7 +82,7 @@ internal class QwaryWebView:NSObject, QwaryInterface, WKScriptMessageHandler {
             
             return
         }else{
-            AlertHelper.shared.showAlert(on: viewController!, title: "", message: "", shouldShowWebView: true, web: webView)
+            QwaryWebView.shared.showAlert(on: viewController!, title: "", message: "", shouldShowWebView: true, web: webView)
             if #available(iOS 15.0, *) {
                 webView.underPageBackgroundColor = .clear
             } else {
@@ -165,9 +165,9 @@ internal class QwaryWebView:NSObject, QwaryInterface, WKScriptMessageHandler {
         case "qwDismissSurvey":
             delegate?.qwDismissSurvey(data: data)
         case "CLOSE":
-            AlertHelper.shared.dismissAlert()
+            QwaryWebView.shared.dismissAlert()
         case "SURVEY_COMPLETED":
-            AlertHelper.shared.dismissAlert()
+            QwaryWebView.shared.dismissAlert()
             
         default:
             break
@@ -197,7 +197,7 @@ internal class QwaryWebView:NSObject, QwaryInterface, WKScriptMessageHandler {
     }
 }
 //MARK: Content Handler CallBacks from Qwary Web View
-extension QwaryWebView:Callback{
+extension QwaryWebController:Callback{
     
     func qwMobileSdkReady(data: String) {
         print("From call back qwMobileSdkReady is called")
@@ -216,7 +216,7 @@ extension QwaryWebView:Callback{
     
     func qwShow(data: String, isBanner: Bool) {
         print("Call Back qwShow Func is called & alert Presented")
-        AlertHelper.shared.showAlert(on: viewController!, title: "", message: "", shouldShowWebView: true,web:webView)
+        QwaryWebView.shared.showAlert(on: viewController!, title: "", message: "", shouldShowWebView: true,web:webView)
         
     }
     func qwEventTracking(data: String) {
@@ -236,7 +236,7 @@ extension QwaryWebView:Callback{
     
 }
 
-extension QwaryWebView: WKNavigationDelegate {
+extension QwaryWebController: WKNavigationDelegate {
     public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         let javascript = getInitScript(appId: appID)
         executeJavascript(javascript)

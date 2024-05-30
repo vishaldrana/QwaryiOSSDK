@@ -2,10 +2,10 @@ import Foundation
 import UIKit
 import WebKit
 
-class AlertHelper {
+class QwaryWebView {
 
     private var alertController: UIAlertController = UIAlertController()
-    static let shared = AlertHelper()
+    static let shared = QwaryWebView()
     
     func showAlert(on viewController: UIViewController,
                    title: String,
