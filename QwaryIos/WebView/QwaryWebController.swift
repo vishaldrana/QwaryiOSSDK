@@ -71,7 +71,7 @@ internal class QwaryWebController:NSObject, QwaryInterface, WKScriptMessageHandl
         webView.backgroundColor = .black
         let url = URL(string: "\(srcroot)render.html")!
         loadHTMLPage()
-        getJSPath()
+        //getJSPath()
         //webView.loadFileURL(url, allowingReadAccessTo: url)
         
         
@@ -188,13 +188,13 @@ internal class QwaryWebController:NSObject, QwaryInterface, WKScriptMessageHandl
     }
     
     //MARK: Get the Access of Javascript file
-    private func getJSPath(){
-        let frameworkBundle = Bundle(for: type(of: self))
-        if let jsFilePath = frameworkBundle.path(forResource: "qw.intercept.sdk.merged", ofType: "js") {
-            jSpath = jsFilePath
-            
-        }
-    }
+//    private func getJSPath(){
+//        let frameworkBundle = Bundle(for: type(of: self))
+//        if let jsFilePath = frameworkBundle.path(forResource: "qw.intercept.sdk.merged", ofType: "js") {
+//            jSpath = jsFilePath
+//            
+//        }
+//    }
 }
 //MARK: Content Handler CallBacks from Qwary Web View
 extension QwaryWebController:Callback{

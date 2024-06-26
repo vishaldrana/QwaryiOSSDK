@@ -3,12 +3,13 @@ import Foundation
 import WebKit
 
 var jSpath = ""
+
 //e.src = "\(srcroot)QwaryIos/qw.intercept.sdk.merged.js?id=" + app_id;
 func getInitScript(appId: String) -> String
 {
 //    let srcroot = URL(fileURLWithPath: #file).deletingLastPathComponent()
 //        .deletingLastPathComponent()
-
+    var url = "https://static.qwary.com/resources/sdk/mobile_intercept/qw.intercept.sdk.js"
     return """
   var app_id = "\(appId)";
   window.qwSettings = {
@@ -44,7 +45,7 @@ func getInitScript(appId: String) -> String
         var e = document.createElement("script");
         e.type = "text/javascript";
         e.async = true;
-        e.src = "\(jSpath)?id=" + app_id;
+        e.src = "\(url)?id=" + app_id;
         var n = document.getElementsByTagName("script")[0];
         // Satinder Change as n is undefined  n.parentNode.insertBefore(e,n)
         document.head.appendChild(e);

@@ -5,7 +5,8 @@
 //  Created by Geek Tech on 27/05/24.
 //
 import Foundation
-Qwary iOS SDK Integration Guide
+
+ MARK: Qwary iOS SDK Integration Guide
 Overview
 The Qwary iOS SDK allows you to seamlessly integrate surveys and feedback forms into your iOS application. This guide will walk you through the process of downloading, importing, and configuring the SDK within your project.
 
