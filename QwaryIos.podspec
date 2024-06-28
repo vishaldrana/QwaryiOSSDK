@@ -29,7 +29,8 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '14.0'
 
-  s.source_files = 'Classes/**/*'
+  s.source_files = 'Classes/**/*.swift'
+  s.resources_files = 'Classes/**/*.{html}
   s.swift_version = '5.0'
   # s.resource_bundles = {
   #   'QwaryIos' => ['QwaryIos/Assets/*.png']
