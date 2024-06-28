@@ -1,0 +1,6 @@
+framework module QwaryIos {
+  umbrella header "QwaryIos-umbrella.h"
+
+  export *
+  module * { export * }
+}

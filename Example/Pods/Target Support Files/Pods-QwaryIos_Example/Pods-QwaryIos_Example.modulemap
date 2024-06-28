@@ -1,0 +1,6 @@
+framework module Pods_QwaryIos_Example {
+  umbrella header "Pods-QwaryIos_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,16 @@
+PODS:
+  - QwaryIos (0.1.0)
+
+DEPENDENCIES:
+  - QwaryIos (from `../`)
+
+EXTERNAL SOURCES:
+  QwaryIos:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  QwaryIos: da3e61b6dcc6e7363e4b9e0dac89244c470326b7
+
+PODFILE CHECKSUM: 23ba610b4e7a8ba81fe876ddbcf2b028f864d4cb
+
+COCOAPODS: 1.15.2

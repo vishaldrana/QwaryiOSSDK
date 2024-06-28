@@ -1,0 +1,807 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		12BA72CF2C2EC8340067A96B /* QwaryWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BA72C92C2EC8340067A96B /* QwaryWebView.swift */; };
+		12BA72D02C2EC8340067A96B /* render.html in Resources */ = {isa = PBXBuildFile; fileRef = 12BA72CA2C2EC8340067A96B /* render.html */; };
+		12BA72D22C2EC8340067A96B /* QwaryWebController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BA72CC2C2EC8340067A96B /* QwaryWebController.swift */; };
+		12BA72D32C2EC8340067A96B /* Qwary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BA72CD2C2EC8340067A96B /* Qwary.swift */; };
+		12BA72D42C2EC8340067A96B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BA72CE2C2EC8340067A96B /* Constants.swift */; };
+		7A7E9D0889D2DD6B823AD2A042EA78A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		8327D6384E6EA6DE12887B27ACDB1DB9 /* Pods-QwaryIos_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FDC4156D60249F192ACCF56BCAD10ED2 /* Pods-QwaryIos_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94DD74A82BC4FF938A9439FD0669D418 /* QwaryIos-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EC148D0F4E0B097083E7CC358E6636F1 /* QwaryIos-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A2B483037DDA3F1D82049EC9D7216119 /* QwaryIos-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FA275C58000621CA17A55A9F6FF4A937 /* QwaryIos-dummy.m */; };
+		CEF00EF56CA7249AB6A21A492E805ABF /* Pods-QwaryIos_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E2FC5B32D737425545EB1C232F660C1 /* Pods-QwaryIos_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E78C8159296C7BF008646AA046798AC6 /* Pods-QwaryIos_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F664466694E0F104243FFAF1A8639A /* Pods-QwaryIos_Tests-dummy.m */; };
+		EC19FF94B9DDD23C919189F751E93A4A /* Pods-QwaryIos_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF116C222198EB0DDB39C1B4F46B8E2 /* Pods-QwaryIos_Example-dummy.m */; };
+		EEE3D1AE48F1253FCCC085C6030EE83C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		F125C42EEC31D9100CAD40F6672F492D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		48BD7DFDF7D18DC4C7939AEC72A43C5E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 997A5206ED5EB00E15B0D44517B72E58;
+			remoteInfo = QwaryIos;
+		};
+		DF10371B738A4BFDB2141155D331AD79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 59E429B4AF4BA31814EF27FD670EC3D4;
+			remoteInfo = "Pods-QwaryIos_Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06CF0E55F0EB047000525F4F686A08E1 /* QwaryIos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QwaryIos.debug.xcconfig; sourceTree = "<group>"; };
+		0766DD12E76328F22C1217E564FE3BC7 /* Pods-QwaryIos_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-QwaryIos_Tests.modulemap"; sourceTree = "<group>"; };
+		12BA72C92C2EC8340067A96B /* QwaryWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QwaryWebView.swift; sourceTree = "<group>"; };
+		12BA72CA2C2EC8340067A96B /* render.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = render.html; sourceTree = "<group>"; };
+		12BA72CC2C2EC8340067A96B /* QwaryWebController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QwaryWebController.swift; sourceTree = "<group>"; };
+		12BA72CD2C2EC8340067A96B /* Qwary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Qwary.swift; sourceTree = "<group>"; };
+		12BA72CE2C2EC8340067A96B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1CE55D8FDC2B82FEEAB1628205B4C6DA /* Pods_QwaryIos_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QwaryIos_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		261FD87CD0230E70578C074184BFDA6B /* Pods-QwaryIos_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-QwaryIos_Tests-Info.plist"; sourceTree = "<group>"; };
+		395ACBD5174A3D2497E403302A84C03F /* Pods-QwaryIos_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QwaryIos_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		3F41EC9C41181ADF4BB8828010E96FF6 /* Pods-QwaryIos_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-QwaryIos_Example-Info.plist"; sourceTree = "<group>"; };
+		4F5CE2126115BAFEFD76045F5DFB35CF /* QwaryIos.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = QwaryIos.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		68FAD363D9F477FD8F6CCC607C80A86B /* Pods-QwaryIos_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QwaryIos_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7D1893BDDC18AF52852932C75FA000C6 /* Pods_QwaryIos_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QwaryIos_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F4D541D077FC0866BB350C314D7D75C /* Pods-QwaryIos_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-QwaryIos_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E2FC5B32D737425545EB1C232F660C1 /* Pods-QwaryIos_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-QwaryIos_Tests-umbrella.h"; sourceTree = "<group>"; };
+		A5D975D141CC26769CAF77FB9C8A2D06 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		AF94A1A958B55BAEAE890CD1E088230E /* QwaryIos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QwaryIos.release.xcconfig; sourceTree = "<group>"; };
+		AFC5B16000B3F2B55B7EF43FD10E5815 /* Pods-QwaryIos_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-QwaryIos_Example-frameworks.sh"; sourceTree = "<group>"; };
+		B287CD2073CADA6AEA8E26BEE443B203 /* Pods-QwaryIos_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-QwaryIos_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		C1758ECFDBA734D0C5EECE9793FBF5C6 /* QwaryIos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QwaryIos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C43097E4A894F0D67455C349620A1954 /* QwaryIos-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QwaryIos-prefix.pch"; sourceTree = "<group>"; };
+		C8E9BA87B9C6FF135F6540597B0B436F /* Pods-QwaryIos_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QwaryIos_Example.release.xcconfig"; sourceTree = "<group>"; };
+		D2D46B9B608E9256FD73B3083C519A7A /* Pods-QwaryIos_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QwaryIos_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		DBE0CACC761C75BFE26706DFC06784D2 /* QwaryIos-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "QwaryIos-Info.plist"; sourceTree = "<group>"; };
+		DCF116C222198EB0DDB39C1B4F46B8E2 /* Pods-QwaryIos_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-QwaryIos_Example-dummy.m"; sourceTree = "<group>"; };
+		DEB6CD5393236E97062439B7DC1322B7 /* Pods-QwaryIos_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-QwaryIos_Example.modulemap"; sourceTree = "<group>"; };
+		E1F8CED0F2F9A2A7E286DA5396DE34D1 /* Pods-QwaryIos_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-QwaryIos_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		E53D6BD5974FC867966A59C696B26326 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E6F664466694E0F104243FFAF1A8639A /* Pods-QwaryIos_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-QwaryIos_Tests-dummy.m"; sourceTree = "<group>"; };
+		EC148D0F4E0B097083E7CC358E6636F1 /* QwaryIos-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QwaryIos-umbrella.h"; sourceTree = "<group>"; };
+		EF22A10C57377FF9BAD36B1896AB4AFE /* Pods-QwaryIos_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-QwaryIos_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FA275C58000621CA17A55A9F6FF4A937 /* QwaryIos-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QwaryIos-dummy.m"; sourceTree = "<group>"; };
+		FA3C6D79420183B713A8AF753940852F /* QwaryIos.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = QwaryIos.modulemap; sourceTree = "<group>"; };
+		FDC4156D60249F192ACCF56BCAD10ED2 /* Pods-QwaryIos_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-QwaryIos_Example-umbrella.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A2D87A6812C12A84D226E041D2D7220 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F125C42EEC31D9100CAD40F6672F492D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38C818C8EF79C58C8C1EFE3EA110619E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEE3D1AE48F1253FCCC085C6030EE83C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50BAFA5AC6C3922DD3ED5219B502FE2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A7E9D0889D2DD6B823AD2A042EA78A6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1145A65A047691823696876D2777EA9B /* Pods-QwaryIos_Example */ = {
+			isa = PBXGroup;
+			children = (
+				DEB6CD5393236E97062439B7DC1322B7 /* Pods-QwaryIos_Example.modulemap */,
+				7F4D541D077FC0866BB350C314D7D75C /* Pods-QwaryIos_Example-acknowledgements.markdown */,
+				E1F8CED0F2F9A2A7E286DA5396DE34D1 /* Pods-QwaryIos_Example-acknowledgements.plist */,
+				DCF116C222198EB0DDB39C1B4F46B8E2 /* Pods-QwaryIos_Example-dummy.m */,
+				AFC5B16000B3F2B55B7EF43FD10E5815 /* Pods-QwaryIos_Example-frameworks.sh */,
+				3F41EC9C41181ADF4BB8828010E96FF6 /* Pods-QwaryIos_Example-Info.plist */,
+				FDC4156D60249F192ACCF56BCAD10ED2 /* Pods-QwaryIos_Example-umbrella.h */,
+				D2D46B9B608E9256FD73B3083C519A7A /* Pods-QwaryIos_Example.debug.xcconfig */,
+				C8E9BA87B9C6FF135F6540597B0B436F /* Pods-QwaryIos_Example.release.xcconfig */,
+			);
+			name = "Pods-QwaryIos_Example";
+			path = "Target Support Files/Pods-QwaryIos_Example";
+			sourceTree = "<group>";
+		};
+		12BA72C82C2EC7FD0067A96B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				12BA72CE2C2EC8340067A96B /* Constants.swift */,
+				12BA72CD2C2EC8340067A96B /* Qwary.swift */,
+				12BA72CC2C2EC8340067A96B /* QwaryWebController.swift */,
+				12BA72C92C2EC8340067A96B /* QwaryWebView.swift */,
+				12BA72CA2C2EC8340067A96B /* render.html */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		3A95E3943553142A438BE5FF82D64A6F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA3C6D79420183B713A8AF753940852F /* QwaryIos.modulemap */,
+				FA275C58000621CA17A55A9F6FF4A937 /* QwaryIos-dummy.m */,
+				DBE0CACC761C75BFE26706DFC06784D2 /* QwaryIos-Info.plist */,
+				C43097E4A894F0D67455C349620A1954 /* QwaryIos-prefix.pch */,
+				EC148D0F4E0B097083E7CC358E6636F1 /* QwaryIos-umbrella.h */,
+				06CF0E55F0EB047000525F4F686A08E1 /* QwaryIos.debug.xcconfig */,
+				AF94A1A958B55BAEAE890CD1E088230E /* QwaryIos.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/QwaryIos";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		63234E071A466CC87A9C034545D69BD4 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8AA7063F037C59BB843A10019BAE5ED1 /* QwaryIos */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		73958DA28C54F351500BAE510514704C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D1893BDDC18AF52852932C75FA000C6 /* Pods_QwaryIos_Example.framework */,
+				1CE55D8FDC2B82FEEAB1628205B4C6DA /* Pods_QwaryIos_Tests.framework */,
+				C1758ECFDBA734D0C5EECE9793FBF5C6 /* QwaryIos.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8AA7063F037C59BB843A10019BAE5ED1 /* QwaryIos */ = {
+			isa = PBXGroup;
+			children = (
+				12BA72C82C2EC7FD0067A96B /* Classes */,
+				E79B69822837E68836A626431E4FA022 /* Pod */,
+				3A95E3943553142A438BE5FF82D64A6F /* Support Files */,
+			);
+			name = QwaryIos;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				63234E071A466CC87A9C034545D69BD4 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				73958DA28C54F351500BAE510514704C /* Products */,
+				D8A742D3587D5244D9DFC4E08E98D66E /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D09FF52DC4FB68262EBADB244F71C62E /* Pods-QwaryIos_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				0766DD12E76328F22C1217E564FE3BC7 /* Pods-QwaryIos_Tests.modulemap */,
+				EF22A10C57377FF9BAD36B1896AB4AFE /* Pods-QwaryIos_Tests-acknowledgements.markdown */,
+				B287CD2073CADA6AEA8E26BEE443B203 /* Pods-QwaryIos_Tests-acknowledgements.plist */,
+				E6F664466694E0F104243FFAF1A8639A /* Pods-QwaryIos_Tests-dummy.m */,
+				261FD87CD0230E70578C074184BFDA6B /* Pods-QwaryIos_Tests-Info.plist */,
+				9E2FC5B32D737425545EB1C232F660C1 /* Pods-QwaryIos_Tests-umbrella.h */,
+				68FAD363D9F477FD8F6CCC607C80A86B /* Pods-QwaryIos_Tests.debug.xcconfig */,
+				395ACBD5174A3D2497E403302A84C03F /* Pods-QwaryIos_Tests.release.xcconfig */,
+			);
+			name = "Pods-QwaryIos_Tests";
+			path = "Target Support Files/Pods-QwaryIos_Tests";
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D8A742D3587D5244D9DFC4E08E98D66E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1145A65A047691823696876D2777EA9B /* Pods-QwaryIos_Example */,
+				D09FF52DC4FB68262EBADB244F71C62E /* Pods-QwaryIos_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		E79B69822837E68836A626431E4FA022 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				A5D975D141CC26769CAF77FB9C8A2D06 /* LICENSE */,
+				4F5CE2126115BAFEFD76045F5DFB35CF /* QwaryIos.podspec */,
+				E53D6BD5974FC867966A59C696B26326 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1D799D204DEDC8FA7526708EFE48D0DF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEF00EF56CA7249AB6A21A492E805ABF /* Pods-QwaryIos_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F1FDDF76C4FD7F17FB019BD57D4D53F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8327D6384E6EA6DE12887B27ACDB1DB9 /* Pods-QwaryIos_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4670EDDE9448BC15392FCC42F7CA1054 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94DD74A82BC4FF938A9439FD0669D418 /* QwaryIos-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		59E429B4AF4BA31814EF27FD670EC3D4 /* Pods-QwaryIos_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DD82A9096EA3D043B629B6796C319AA /* Build configuration list for PBXNativeTarget "Pods-QwaryIos_Example" */;
+			buildPhases = (
+				1F1FDDF76C4FD7F17FB019BD57D4D53F /* Headers */,
+				8A5CBE3664E61A0347135DDAA8FF9224 /* Sources */,
+				50BAFA5AC6C3922DD3ED5219B502FE2D /* Frameworks */,
+				215ED7B24DFE8B1A4310EA659DA0CAC4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FEC83800D8FDFD6DB6A0D6DA43A66B19 /* PBXTargetDependency */,
+			);
+			name = "Pods-QwaryIos_Example";
+			productName = Pods_QwaryIos_Example;
+			productReference = 7D1893BDDC18AF52852932C75FA000C6 /* Pods_QwaryIos_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		997A5206ED5EB00E15B0D44517B72E58 /* QwaryIos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6C769F71D78C7197C3E96E7BF1C31CA /* Build configuration list for PBXNativeTarget "QwaryIos" */;
+			buildPhases = (
+				4670EDDE9448BC15392FCC42F7CA1054 /* Headers */,
+				3140C2B38D8FEA57283313B41C719F12 /* Sources */,
+				2A2D87A6812C12A84D226E041D2D7220 /* Frameworks */,
+				A50110196858AFA122C4CD9DCD966C38 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QwaryIos;
+			productName = QwaryIos;
+			productReference = C1758ECFDBA734D0C5EECE9793FBF5C6 /* QwaryIos.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B07EF6128699692BA7C24459E86A555B /* Pods-QwaryIos_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 593D95F3DEA35A65C6C898FB6EEA3030 /* Build configuration list for PBXNativeTarget "Pods-QwaryIos_Tests" */;
+			buildPhases = (
+				1D799D204DEDC8FA7526708EFE48D0DF /* Headers */,
+				DD5947D344170A57CE50C414EA86FD7F /* Sources */,
+				38C818C8EF79C58C8C1EFE3EA110619E /* Frameworks */,
+				AA34E8769C0CB4AB6D0AFD7592B0B399 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7E67DFF4C76392C09977BF4E28FD28BB /* PBXTargetDependency */,
+			);
+			name = "Pods-QwaryIos_Tests";
+			productName = Pods_QwaryIos_Tests;
+			productReference = 1CE55D8FDC2B82FEEAB1628205B4C6DA /* Pods_QwaryIos_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					997A5206ED5EB00E15B0D44517B72E58 = {
+						LastSwiftMigration = 1500;
+					};
+				};
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 73958DA28C54F351500BAE510514704C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				59E429B4AF4BA31814EF27FD670EC3D4 /* Pods-QwaryIos_Example */,
+				B07EF6128699692BA7C24459E86A555B /* Pods-QwaryIos_Tests */,
+				997A5206ED5EB00E15B0D44517B72E58 /* QwaryIos */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		215ED7B24DFE8B1A4310EA659DA0CAC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A50110196858AFA122C4CD9DCD966C38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12BA72D02C2EC8340067A96B /* render.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA34E8769C0CB4AB6D0AFD7592B0B399 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3140C2B38D8FEA57283313B41C719F12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12BA72CF2C2EC8340067A96B /* QwaryWebView.swift in Sources */,
+				12BA72D22C2EC8340067A96B /* QwaryWebController.swift in Sources */,
+				A2B483037DDA3F1D82049EC9D7216119 /* QwaryIos-dummy.m in Sources */,
+				12BA72D32C2EC8340067A96B /* Qwary.swift in Sources */,
+				12BA72D42C2EC8340067A96B /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A5CBE3664E61A0347135DDAA8FF9224 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC19FF94B9DDD23C919189F751E93A4A /* Pods-QwaryIos_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD5947D344170A57CE50C414EA86FD7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E78C8159296C7BF008646AA046798AC6 /* Pods-QwaryIos_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7E67DFF4C76392C09977BF4E28FD28BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-QwaryIos_Example";
+			target = 59E429B4AF4BA31814EF27FD670EC3D4 /* Pods-QwaryIos_Example */;
+			targetProxy = DF10371B738A4BFDB2141155D331AD79 /* PBXContainerItemProxy */;
+		};
+		FEC83800D8FDFD6DB6A0D6DA43A66B19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = QwaryIos;
+			target = 997A5206ED5EB00E15B0D44517B72E58 /* QwaryIos */;
+			targetProxy = 48BD7DFDF7D18DC4C7939AEC72A43C5E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1D34A0BFA0A5431169211CA2118C0E39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 395ACBD5174A3D2497E403302A84C03F /* Pods-QwaryIos_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-QwaryIos_Tests/Pods-QwaryIos_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-QwaryIos_Tests/Pods-QwaryIos_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2FA0D11FDAA6EBDC0348E674067062C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2D46B9B608E9256FD73B3083C519A7A /* Pods-QwaryIos_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-QwaryIos_Example/Pods-QwaryIos_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-QwaryIos_Example/Pods-QwaryIos_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		47ACCE69D4B5A72CDA2AC3324C10C9DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF94A1A958B55BAEAE890CD1E088230E /* QwaryIos.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/QwaryIos/QwaryIos-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/QwaryIos/QwaryIos-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/QwaryIos/QwaryIos.modulemap";
+				PRODUCT_MODULE_NAME = QwaryIos;
+				PRODUCT_NAME = QwaryIos;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6F96409FE85720A85353D585796E7497 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68FAD363D9F477FD8F6CCC607C80A86B /* Pods-QwaryIos_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-QwaryIos_Tests/Pods-QwaryIos_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-QwaryIos_Tests/Pods-QwaryIos_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7EE7A78859F657F6BEFC651185B43192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		943D52E43892FFA5754FCE8E3107BF1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8E9BA87B9C6FF135F6540597B0B436F /* Pods-QwaryIos_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-QwaryIos_Example/Pods-QwaryIos_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-QwaryIos_Example/Pods-QwaryIos_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D299434AB35E7FD6F7921C8EF24742FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		D98E947B56EA9AD6CACAA46818724778 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06CF0E55F0EB047000525F4F686A08E1 /* QwaryIos.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/QwaryIos/QwaryIos-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/QwaryIos/QwaryIos-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/QwaryIos/QwaryIos.modulemap";
+				PRODUCT_MODULE_NAME = QwaryIos;
+				PRODUCT_NAME = QwaryIos;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0DD82A9096EA3D043B629B6796C319AA /* Build configuration list for PBXNativeTarget "Pods-QwaryIos_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FA0D11FDAA6EBDC0348E674067062C0 /* Debug */,
+				943D52E43892FFA5754FCE8E3107BF1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D299434AB35E7FD6F7921C8EF24742FF /* Debug */,
+				7EE7A78859F657F6BEFC651185B43192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		593D95F3DEA35A65C6C898FB6EEA3030 /* Build configuration list for PBXNativeTarget "Pods-QwaryIos_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F96409FE85720A85353D585796E7497 /* Debug */,
+				1D34A0BFA0A5431169211CA2118C0E39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6C769F71D78C7197C3E96E7BF1C31CA /* Build configuration list for PBXNativeTarget "QwaryIos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D98E947B56EA9AD6CACAA46818724778 /* Debug */,
+				47ACCE69D4B5A72CDA2AC3324C10C9DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
