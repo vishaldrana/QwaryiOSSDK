@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'QwaryIos'
   s.version          = '1.0.0'
-  s.summary          = 'A short description of QwaryIos.'
+  s.summary          = 'An SDK to configure the Survey on customising Screen where the user can'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -29,8 +29,8 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '14.0'
 
-  s.source_files = 'QwaryIos/Classes/**/*'
-  
+  s.source_files = 'Classes/**/*'
+  s.swift_version = '5.0'
   # s.resource_bundles = {
   #   'QwaryIos' => ['QwaryIos/Assets/*.png']
   # }
