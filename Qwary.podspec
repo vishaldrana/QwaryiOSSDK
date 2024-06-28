@@ -97,14 +97,14 @@ from your Qwary Sales contact.
   #  Not including the public_header_files will make all headers public.
   #
 
-  #spec.source_files = "Qwary/**/*.swift"
+  spec.source_files = "QwaryIos/**/*.swift"
 
-  spec.resources = "Qwary/**/*.{html,js}"
+  spec.resources = "QwaryIos/**/*.{html}"
 
   #spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
-
+spec.swift_versions = "5.0"
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
