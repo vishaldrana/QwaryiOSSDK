@@ -17,15 +17,14 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
-
-  s.homepage         = 'https://github.com/devgeektech/QwaryIos'
+    s.description  = <<-DESC
+    The Qwary iOS SDK allows you to seamlessly integrate surveys and feedback forms into your iOS application
+                   DESC
+  s.homepage         = 'https://www.qwary.com/'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'devgeektech' => 'vishal@qwary.com' }
-  s.source           = { :git => 'https://github.com/devgeektech/QwaryIos.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/vishaldrana/QwaryiOSSDK.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '14.0'
